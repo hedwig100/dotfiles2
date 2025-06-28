@@ -27,3 +27,13 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-history-substring-search
+
+# asdf
+source "$ASDF_DATA_DIR/asdf.sh"
+fpath=(${ASDF_DIR}/completions $fpath)
+
+# rust
+if type cargo > /dev/null; then 
+    source "$CARGO_HOME/env"
+fi
+
