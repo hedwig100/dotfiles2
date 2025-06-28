@@ -1,3 +1,11 @@
+## history settings
+export HISTFILE="$XDG_STATE_HOME/zsh_history"
+export HISTSIZE=1000
+export SAVEHIST=100000
+
+setopt share_history
+setopt appendhistory
+
 # 1. Install zinit if not installed
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
