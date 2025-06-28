@@ -16,6 +16,10 @@ fi
 # asdf
 export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
 
+# deno
+export DENO_INSTALL="$XDG_DATA_HOME/deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # go
 export GO111MODULE=on
 

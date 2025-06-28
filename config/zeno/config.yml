@@ -1,0 +1,48 @@
+snippets:
+
+    # git
+    - name: g
+      keyword: g
+      snippet: git
+    
+    - name: git s
+      keyword: s
+      snippet: status
+      context:
+        lbuffer: ^git\s
+    
+    - name: git a
+      keyword: a
+      snippet: add
+      context:
+        lbuffer: ^git\s
+    
+    - name: git aa
+      keyword: aa
+      snippet: add --all
+      context:
+        lbuffer: ^git\s
+
+    - name: git l
+      keyword: l
+      snippet: log --oneline
+      context:
+        lbuffer: ^git\s
+    
+    - name: git c
+      keyword: c
+      snippet: commit
+      context:
+        lbuffer: ^git\s
+    
+    - name: git commit message
+      keyword: gcim
+      snippet: git commit -m '{{commit_message}}'
+    
+    - name: git push origin hoge
+      keyword: gpo
+      snippet: git push origin {{branch}}
+    
+    - name: git pull origin hoge
+      keyword: gplo
+      snippet: git pull origin {{branch}}
