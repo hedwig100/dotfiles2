@@ -1,6 +1,7 @@
 # dotfiles
 
 ```
+mkdir repos/github.com/hedwig100 && cd repos/github.com/hedwig100
 git clone git@github.com:hedwig100/dotfiles2.git
 cd dotfiles2
 ./install.sh
@@ -21,13 +22,15 @@ cd dotfiles2
     - `XDG_DATA_HOME -> $HOME/.local/share`
     - `XDG_STATE_HOME -> $HOME/.local/state`
 
-- インストール
+- インストールするもの
     - [deno](https://github.com/denoland/deno_install)
     - [fzf](https://github.com/junegunn/fzf)
+    - [zeno](https://github.com/sandibi13/zeno)
 
 - 以下のソフトウェアの設定を行う(インストールはしないのでそれは別にすること)
     - [x] asdf
     - [x] go
+    - [x] ghq
     - [x] rust
     - [x] poetry
 
@@ -35,6 +38,8 @@ cd dotfiles2
 
 - asdfのインストール
 - goのインストール
+- ghqのインストール
 - pythonのインストール
 - poetryのインストール
+- rustのインストール
 - uvのインストール
