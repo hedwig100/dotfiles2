@@ -1,7 +1,7 @@
 # dotfiles
 
 ```
-git clone <this repo>
-cd dotfiles
+git clone dotfiles2
+cd dotfiles2
 ./install.sh
 ```
