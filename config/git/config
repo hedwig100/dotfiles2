@@ -1,0 +1,22 @@
+[use]
+	name = hedwig100
+
+[user]
+	name = hedwig100
+	email = shota.in26@gmail.com
+
+[init]
+	defaultBranch = main
+	templatedir = ~/.config/git/template
+
+[core]
+	editor = vim
+
+[pull]
+    ff = only
+
+[include]
+    path = conf.d/local.conf
+
+[ghq]
+	root = ~/repos
