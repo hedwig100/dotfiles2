@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export DOTFILES_DIR="$(cd "$(dirname "$0")" || exit 1; pwd)"
+cd "$(dirname "$0")"
+export DOTFILES_DIR="$(pwd)"
 
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
