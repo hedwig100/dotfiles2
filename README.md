@@ -36,7 +36,7 @@ cd dotfiles2
 
 ## 必要設定
 
-- asdfのインストール
+- asdfのインストール: [https://asdf-vm.com/ja-jp/guide/getting-started.html](https://asdf-vm.com/ja-jp/guide/getting-started.html)
 - goのインストール
 - ghqのインストール
 - pythonのインストール
