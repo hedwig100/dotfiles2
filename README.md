@@ -23,6 +23,7 @@ cd dotfiles2
 
 - インストール
     - [deno](https://github.com/denoland/deno_install)
+    - [fzf](https://github.com/junegunn/fzf)
 
 - 以下のソフトウェアの設定を行う(インストールはしないのでそれは別にすること)
     - [x] asdf

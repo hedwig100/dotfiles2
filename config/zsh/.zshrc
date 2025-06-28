@@ -22,10 +22,6 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
-# 4. Install zeno
-zinit ice lucid depth"1" blockf
-zinit light yuki-yano/zeno.zsh
-
 # 5. Install zsh plugins
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
@@ -36,7 +32,18 @@ zinit light zsh-users/zsh-history-substring-search
 source "$ASDF_DATA_DIR/asdf.sh"
 fpath=(${ASDF_DIR}/completions $fpath)
 
+# fzf
+if ! command -v fzf &> /dev/null; then
+    zinit pack"binary" depth"1" for fzf
+fi
+
 # rust
 if type cargo > /dev/null; then 
     source "$CARGO_HOME/env"
 fi
+
+# zeno
+zinit ice lucid depth"1" blockf
+zinit light yuki-yano/zeno.zsh
+
+bindkey ' '  zeno-auto-snippet
