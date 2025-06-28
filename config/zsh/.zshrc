@@ -32,9 +32,9 @@ fi
 
 # 5. Install zsh plugins
 zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-syntax-highlighting
+# zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-history-substring-search
 
 # asdf
 source "$ASDF_DATA_DIR/asdf.sh"
@@ -55,3 +55,6 @@ zinit ice lucid depth"1" blockf
 zinit light yuki-yano/zeno.zsh
 
 bindkey ' '  zeno-auto-snippet
+bindkey '^i' zeno-completion
+bindkey '^x' zeno-insert-snippet
+bindkey '^r' zeno-history-selection
