@@ -11,8 +11,8 @@ if [ -e "$ZDOTDIR/local.env" ]; then
     source "$ZDOTDIR/local.env"
 fi
 
-## asdf
-export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
+# mise
+export MISE_DATA_DIR="$XDG_DATA_HOME/mise"
 
 ## deno
 export DENO_INSTALL="$XDG_DATA_HOME/deno"

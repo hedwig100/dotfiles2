@@ -1,5 +1,9 @@
 # dotfiles
 
+事前に
+-　gitの設定(CLIのインストール、SSH鍵の設定)
+- シンボリックリンクとか付けるところでミスっていることがありその場合は手動で設定すること
+
 ```
 mkdir repos/github.com/hedwig100 && cd repos/github.com/hedwig100
 git clone git@github.com:hedwig100/dotfiles2.git

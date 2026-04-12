@@ -13,6 +13,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # 2. Zinit completion
+autoload -Uz compinitcompinit
 autoload -Uz _zinit && _comps[zinit]=_zinit
 
 # 3. Install power10k theme if not installed
@@ -35,10 +36,6 @@ zinit light zsh-users/zsh-autosuggestions
 # zinit light zsh-users/zsh-syntax-highlighting
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
-
-# asdf
-source "$ASDF_DATA_DIR/asdf.sh"
-fpath=(${ASDF_DIR}/completions $fpath)
 
 # fzf
 if ! command -v fzf &> /dev/null; then
