@@ -38,6 +38,19 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 
+# mise
+zinit as="command" lucid from="gh-r" for \
+    id-as="usage" \
+    atpull="%atclone" \
+    jdx/usage
+
+zinit as="command" lucid from="gh-r" for \
+    id-as="mise" mv="mise* -> mise" \
+    atclone="chmod +x mise && ./mise* completion zsh > _mise" \
+    atpull="%atclone" \
+    atload='eval "$(mise activate zsh)"' \
+    jdx/mise
+
 # fzf
 if ! command -v fzf &> /dev/null; then
     zinit pack"binary" depth"1" for fzf
@@ -56,3 +69,6 @@ bindkey ' '  zeno-auto-snippet
 bindkey '^i' zeno-completion
 bindkey '^x' zeno-insert-snippet
 bindkey '^r' zeno-history-selection
+
+# aliases
+alias cdrepo='local repodir=$(ghq list | fzf -1 +m) && cd $(ghq root)/$repodir'
