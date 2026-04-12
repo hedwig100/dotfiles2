@@ -13,7 +13,8 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # 2. Zinit completion
-autoload -Uz compinitcompinit
+autoload -Uz compinit
+compinit
 autoload -Uz _zinit && _comps[zinit]=_zinit
 
 # 3. Install power10k theme if not installed
