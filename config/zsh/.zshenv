@@ -11,6 +11,8 @@ if [ -e "$ZDOTDIR/local.env" ]; then
     source "$ZDOTDIR/local.env"
 fi
 
+export PATH="$HOME/.local/bin:$PATH"
+
 # mise
 export MISE_DATA_DIR="$XDG_DATA_HOME/mise"
 
