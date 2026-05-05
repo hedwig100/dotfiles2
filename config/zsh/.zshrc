@@ -75,5 +75,7 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey "^O" edit-command-line
 
+bindkey '^g' zeno-ghq-cd
+
 # aliases
 alias cdrepo='local repodir=$(ghq list | fzf -1 +m) && cd $(ghq root)/$repodir'
