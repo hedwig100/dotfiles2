@@ -6,6 +6,9 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+# for edit-command-line
+export EDITOR="vim"
+
 ## local setting
 if [ -e "$ZDOTDIR/local.env" ]; then
     source "$ZDOTDIR/local.env"

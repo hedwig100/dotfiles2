@@ -71,5 +71,9 @@ bindkey '^x' zeno-insert-snippet
 bindkey '^r' zeno-history-selection
 bindkey '^x^f' zeno-snippet-next-placeholder
 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey "^O" edit-command-line
+
 # aliases
 alias cdrepo='local repodir=$(ghq list | fzf -1 +m) && cd $(ghq root)/$repodir'
