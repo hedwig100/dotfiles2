@@ -46,3 +46,28 @@ snippets:
     - name: git pull origin hoge
       keyword: gplo
       snippet: git pull origin {{branch}}
+    
+    - name: claude
+      keyword: cl
+      snippet: claude
+    
+    - name: worktree
+      keyword: wt
+      snippet: git worktree add -b {{branch}} ../{{branch}}
+
+completions:
+  - name: git switch branch
+    patterns:
+      - "^git switch $"
+    sourceCommand: "git branch --format='%(refname:short)'"
+    options:
+      --prompt: "'Branch> '"
+      --preview: "git log --oneline --graph --decorate --color=always -20 {}"
+  
+  - name: kill pid
+    patterns:
+      - "^kill( .*)? $"
+    sourceCommand: "LANG=C ps -ef"
+    options:
+      --header-lines: 1
+    callback: "awk '{print $2}'"
