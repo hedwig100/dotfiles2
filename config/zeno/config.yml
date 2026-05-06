@@ -51,6 +51,10 @@ snippets:
       keyword: cl
       snippet: claude
     
+    - name: claude with dangerous permissions
+      keyword: cld
+      snippet: claude --dangerously-skip-permissions
+    
     - name: worktree
       keyword: wt
       snippet: git worktree add -b {{branch}} ../{{branch}}
