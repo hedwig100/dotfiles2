@@ -54,6 +54,10 @@ snippets:
     - name: worktree
       keyword: wt
       snippet: git worktree add -b {{branch}} ../{{branch}}
+    
+    - name: port check
+      keyword: port
+      snippet: lsof -i :{{port}}
 
 completions:
   - name: git switch branch
