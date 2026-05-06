@@ -64,6 +64,14 @@ completions:
       --prompt: "'Branch> '"
       --preview: "git log --oneline --graph --decorate --color=always -20 {}"
   
+  - name: git push origin branch
+    patterns:
+      - "^git push origin $"
+    sourceCommand: "git branch --format='%(refname:short)'"
+    options:
+      --prompt: "'Branch> '"
+      --preview: "git log --oneline --graph --decorate --color=always -20 {}"
+  
   - name: kill pid
     patterns:
       - "^kill( .*)? $"
