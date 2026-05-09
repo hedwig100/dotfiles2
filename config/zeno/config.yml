@@ -55,6 +55,10 @@ snippets:
       keyword: grc
       snippet: git reset --soft {{commit}}
     
+    - name: git rebase -i 
+      keyword: gri
+      snippet: git rebase -i {{commit}}
+    
     - name: claude
       keyword: cl
       snippet: claude
@@ -96,7 +100,15 @@ completions:
       --prompt: "'Reset to this commit> '"
       --preview: "git show --color=always {}"
     callback: "awk '{print $1}'"
-
+  
+  - name: git rebase -i
+    patterns:
+      - "^git rebase -i $"
+    sourceCommand: "git log --oneline"
+    options:
+      --prompt: "'Rebase from this commit> '"
+      --preview: "git show --color=always {}"
+    callback: "awk '{print $1}'"
   
   - name: git push origin branch
     patterns:
