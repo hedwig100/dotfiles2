@@ -47,6 +47,14 @@ snippets:
       keyword: gplo
       snippet: git pull origin {{branch}}
     
+    - name: git restore from staging
+      keyword: grs
+      snippet: git restore --staged {{file}}
+    
+    - name: git reset most recent commit
+      keyword: grc
+      snippet: git reset --soft {{commit}}
+    
     - name: claude
       keyword: cl
       snippet: claude
@@ -72,6 +80,24 @@ completions:
       --prompt: "'Branch> '"
       --preview: "git log --oneline --graph --decorate --color=always -20 {}"
   
+  - name: git restore from staging
+    patterns:
+      - "^git restore --staged $"
+    sourceCommand: "git diff --cached --name-only"
+    options:
+      --prompt: "'Select a file to unstage> '"
+      --preview: "git diff --cached --color=always {}"
+    
+  - name: git reset most recent commit
+    patterns:
+      - "^git reset --soft $"
+    sourceCommand: "git log --oneline -1"
+    options:
+      --prompt: "'Reset to this commit> '"
+      --preview: "git show --color=always {}"
+    callback: "awk '{print $1}'"
+
+  
   - name: git push origin branch
     patterns:
       - "^git push origin $"
@@ -79,13 +105,21 @@ completions:
     options:
       --prompt: "'Branch> '"
       --preview: "git log --oneline --graph --decorate --color=always -20 {}"
-  
-  - name: kill pid
-    patterns:
+
+  # - name: kill pid
+  #   patterns:
+  #     - "^kill( .*)? $"
+  #   sourceCommand: "LANG=C ps -ef"
+  #   options:
+  #     --header-lines: "1"
+  #   callback: "awk '{print $2}'"
+
+  - name: kill port process
+    patterns: 
       - "^kill( .*)? $"
-    sourceCommand: "LANG=C ps -ef"
+    sourceCommand: "lsof -i -P -n | grep LISTEN"
     options:
-      --header-lines: "1"
+      --prompt: "'Select a process to kill (Port Listening)>'"
     callback: "awk '{print $2}'"
   
   - name: docker stop
