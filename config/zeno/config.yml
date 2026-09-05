@@ -67,13 +67,17 @@ snippets:
       keyword: cld
       snippet: claude --dangerously-skip-permissions
     
-    - name: worktree
-      keyword: wt
-      snippet: git worktree add -b {{branch}} ../{{branch}}
-    
     - name: port check
       keyword: port
       snippet: lsof -i :{{port}}
+    
+    - name: create git worktree
+      keyword: gwta
+      snippet: git worktree add "$HOME/worktrees/$(basename "$PWD")/{{branch}}" -b "{{branch}}"
+
+    - name: cd to git worktree
+      keyword: gwt
+      snippet: cd "$HOME/worktrees/$(basename "$PWD")/{{branch}}"
 
 completions:
   - name: git switch branch
